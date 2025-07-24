@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment3._4._1
 {
-    public abstract class Beverage //derived class from Coffee
+    public abstract class Beverage 
     {
         //inherit from Coffee class
         public string coffeeName { get; set; }
