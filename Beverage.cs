@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace Assignment3._4._1
 {
-    public abstract class Beverage 
+    public abstract class Beverage
     {
-        //inherit from Coffee class
-        public string coffeeName { get; set; }
-        public string coffeeType { get; set; }
-        public string coffeeSize { get; set; }
-        public string coffeeStrength { get; set; }
-        public string coffeeFlavor { get; set; }
-        public string coffeeTemperature { get; set; }
+       
+        public int BeverageID { get; set; }
+        public string ?BeverageName { get; set; }
+        public string ?BeverageExDate { get; set; }
+        public string ?BeverageContainer { get; set; }
+        public double BeverageSize { get; set; }
+        public string ?BeverageFlavor { get; set; }
+        public double BeverageTemperature { get; set; }
 
     }
 }

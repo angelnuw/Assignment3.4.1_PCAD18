@@ -6,12 +6,14 @@ namespace Assignment3._4._1
         {
             InitializeComponent();
         }
-
+        
         private void Form1_Load(object sender, EventArgs e)
         {
-            Coffee.CoffeeInfo.CreateData();
-            var coffees = Coffee.CoffeeInfo.GetCoffees();
+            CoffeeInfo.CreateData();
+            var coffees = CoffeeInfo.GetCoffees();
 
+            //binding the coffee data to the DataGridView
+            coffeeBindingSource.DataSource = coffees;
             coffeeGridView.DataSource = coffees;
         }
     }

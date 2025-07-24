@@ -30,13 +30,19 @@
         {
             components = new System.ComponentModel.Container();
             coffeeGridView = new DataGridView();
-            coffeeNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            coffeeTypeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            coffeeSizeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            coffeeStrengthDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            coffeeFlavorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            coffeeTemperatureDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             coffeeBindingSource = new BindingSource(components);
+            isDecafDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
+            coffeeRoastDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            typeOfCoffeeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            coffeeStrengthDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            hasMilkDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
+            beverageIDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            beverageNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            beverageExDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            beverageContainerDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            beverageSizeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            beverageFlavorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            beverageTemperatureDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)coffeeGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)coffeeBindingSource).BeginInit();
             SuspendLayout();
@@ -45,58 +51,94 @@
             // 
             coffeeGridView.AutoGenerateColumns = false;
             coffeeGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            coffeeGridView.Columns.AddRange(new DataGridViewColumn[] { coffeeNameDataGridViewTextBoxColumn, coffeeTypeDataGridViewTextBoxColumn, coffeeSizeDataGridViewTextBoxColumn, coffeeStrengthDataGridViewTextBoxColumn, coffeeFlavorDataGridViewTextBoxColumn, coffeeTemperatureDataGridViewTextBoxColumn });
+            coffeeGridView.Columns.AddRange(new DataGridViewColumn[] { isDecafDataGridViewCheckBoxColumn, coffeeRoastDataGridViewTextBoxColumn, typeOfCoffeeDataGridViewTextBoxColumn, coffeeStrengthDataGridViewTextBoxColumn, hasMilkDataGridViewCheckBoxColumn, beverageIDDataGridViewTextBoxColumn, beverageNameDataGridViewTextBoxColumn, beverageExDateDataGridViewTextBoxColumn, beverageContainerDataGridViewTextBoxColumn, beverageSizeDataGridViewTextBoxColumn, beverageFlavorDataGridViewTextBoxColumn, beverageTemperatureDataGridViewTextBoxColumn });
             coffeeGridView.DataSource = coffeeBindingSource;
             coffeeGridView.Location = new Point(12, 12);
             coffeeGridView.Name = "coffeeGridView";
-            coffeeGridView.Size = new Size(714, 282);
+            coffeeGridView.Size = new Size(1266, 331);
             coffeeGridView.TabIndex = 0;
-            // 
-            // coffeeNameDataGridViewTextBoxColumn
-            // 
-            coffeeNameDataGridViewTextBoxColumn.DataPropertyName = "coffeeName";
-            coffeeNameDataGridViewTextBoxColumn.HeaderText = "coffeeName";
-            coffeeNameDataGridViewTextBoxColumn.Name = "coffeeNameDataGridViewTextBoxColumn";
-            // 
-            // coffeeTypeDataGridViewTextBoxColumn
-            // 
-            coffeeTypeDataGridViewTextBoxColumn.DataPropertyName = "coffeeType";
-            coffeeTypeDataGridViewTextBoxColumn.HeaderText = "coffeeType";
-            coffeeTypeDataGridViewTextBoxColumn.Name = "coffeeTypeDataGridViewTextBoxColumn";
-            // 
-            // coffeeSizeDataGridViewTextBoxColumn
-            // 
-            coffeeSizeDataGridViewTextBoxColumn.DataPropertyName = "coffeeSize";
-            coffeeSizeDataGridViewTextBoxColumn.HeaderText = "coffeeSize";
-            coffeeSizeDataGridViewTextBoxColumn.Name = "coffeeSizeDataGridViewTextBoxColumn";
-            // 
-            // coffeeStrengthDataGridViewTextBoxColumn
-            // 
-            coffeeStrengthDataGridViewTextBoxColumn.DataPropertyName = "coffeeStrength";
-            coffeeStrengthDataGridViewTextBoxColumn.HeaderText = "coffeeStrength";
-            coffeeStrengthDataGridViewTextBoxColumn.Name = "coffeeStrengthDataGridViewTextBoxColumn";
-            // 
-            // coffeeFlavorDataGridViewTextBoxColumn
-            // 
-            coffeeFlavorDataGridViewTextBoxColumn.DataPropertyName = "coffeeFlavor";
-            coffeeFlavorDataGridViewTextBoxColumn.HeaderText = "coffeeFlavor";
-            coffeeFlavorDataGridViewTextBoxColumn.Name = "coffeeFlavorDataGridViewTextBoxColumn";
-            // 
-            // coffeeTemperatureDataGridViewTextBoxColumn
-            // 
-            coffeeTemperatureDataGridViewTextBoxColumn.DataPropertyName = "coffeeTemperature";
-            coffeeTemperatureDataGridViewTextBoxColumn.HeaderText = "coffeeTemperature";
-            coffeeTemperatureDataGridViewTextBoxColumn.Name = "coffeeTemperatureDataGridViewTextBoxColumn";
             // 
             // coffeeBindingSource
             // 
             coffeeBindingSource.DataSource = typeof(Coffee);
             // 
+            // isDecafDataGridViewCheckBoxColumn
+            // 
+            isDecafDataGridViewCheckBoxColumn.DataPropertyName = "IsDecaf";
+            isDecafDataGridViewCheckBoxColumn.HeaderText = "IsDecaf";
+            isDecafDataGridViewCheckBoxColumn.Name = "isDecafDataGridViewCheckBoxColumn";
+            // 
+            // coffeeRoastDataGridViewTextBoxColumn
+            // 
+            coffeeRoastDataGridViewTextBoxColumn.DataPropertyName = "CoffeeRoast";
+            coffeeRoastDataGridViewTextBoxColumn.HeaderText = "CoffeeRoast";
+            coffeeRoastDataGridViewTextBoxColumn.Name = "coffeeRoastDataGridViewTextBoxColumn";
+            // 
+            // typeOfCoffeeDataGridViewTextBoxColumn
+            // 
+            typeOfCoffeeDataGridViewTextBoxColumn.DataPropertyName = "TypeOfCoffee";
+            typeOfCoffeeDataGridViewTextBoxColumn.HeaderText = "TypeOfCoffee";
+            typeOfCoffeeDataGridViewTextBoxColumn.Name = "typeOfCoffeeDataGridViewTextBoxColumn";
+            // 
+            // coffeeStrengthDataGridViewTextBoxColumn
+            // 
+            coffeeStrengthDataGridViewTextBoxColumn.DataPropertyName = "CoffeeStrength";
+            coffeeStrengthDataGridViewTextBoxColumn.HeaderText = "CoffeeStrength";
+            coffeeStrengthDataGridViewTextBoxColumn.Name = "coffeeStrengthDataGridViewTextBoxColumn";
+            // 
+            // hasMilkDataGridViewCheckBoxColumn
+            // 
+            hasMilkDataGridViewCheckBoxColumn.DataPropertyName = "HasMilk";
+            hasMilkDataGridViewCheckBoxColumn.HeaderText = "HasMilk";
+            hasMilkDataGridViewCheckBoxColumn.Name = "hasMilkDataGridViewCheckBoxColumn";
+            // 
+            // beverageIDDataGridViewTextBoxColumn
+            // 
+            beverageIDDataGridViewTextBoxColumn.DataPropertyName = "BeverageID";
+            beverageIDDataGridViewTextBoxColumn.HeaderText = "BeverageID";
+            beverageIDDataGridViewTextBoxColumn.Name = "beverageIDDataGridViewTextBoxColumn";
+            // 
+            // beverageNameDataGridViewTextBoxColumn
+            // 
+            beverageNameDataGridViewTextBoxColumn.DataPropertyName = "BeverageName";
+            beverageNameDataGridViewTextBoxColumn.HeaderText = "BeverageName";
+            beverageNameDataGridViewTextBoxColumn.Name = "beverageNameDataGridViewTextBoxColumn";
+            // 
+            // beverageExDateDataGridViewTextBoxColumn
+            // 
+            beverageExDateDataGridViewTextBoxColumn.DataPropertyName = "BeverageExDate";
+            beverageExDateDataGridViewTextBoxColumn.HeaderText = "BeverageExDate";
+            beverageExDateDataGridViewTextBoxColumn.Name = "beverageExDateDataGridViewTextBoxColumn";
+            // 
+            // beverageContainerDataGridViewTextBoxColumn
+            // 
+            beverageContainerDataGridViewTextBoxColumn.DataPropertyName = "BeverageContainer";
+            beverageContainerDataGridViewTextBoxColumn.HeaderText = "BeverageContainer";
+            beverageContainerDataGridViewTextBoxColumn.Name = "beverageContainerDataGridViewTextBoxColumn";
+            // 
+            // beverageSizeDataGridViewTextBoxColumn
+            // 
+            beverageSizeDataGridViewTextBoxColumn.DataPropertyName = "BeverageSize";
+            beverageSizeDataGridViewTextBoxColumn.HeaderText = "BeverageSize";
+            beverageSizeDataGridViewTextBoxColumn.Name = "beverageSizeDataGridViewTextBoxColumn";
+            // 
+            // beverageFlavorDataGridViewTextBoxColumn
+            // 
+            beverageFlavorDataGridViewTextBoxColumn.DataPropertyName = "BeverageFlavor";
+            beverageFlavorDataGridViewTextBoxColumn.HeaderText = "BeverageFlavor";
+            beverageFlavorDataGridViewTextBoxColumn.Name = "beverageFlavorDataGridViewTextBoxColumn";
+            // 
+            // beverageTemperatureDataGridViewTextBoxColumn
+            // 
+            beverageTemperatureDataGridViewTextBoxColumn.DataPropertyName = "BeverageTemperature";
+            beverageTemperatureDataGridViewTextBoxColumn.HeaderText = "BeverageTemperature";
+            beverageTemperatureDataGridViewTextBoxColumn.Name = "beverageTemperatureDataGridViewTextBoxColumn";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1339, 737);
             Controls.Add(coffeeGridView);
             Name = "Form1";
             Text = "Form1";
@@ -116,5 +158,16 @@
         private DataGridViewTextBoxColumn coffeeFlavorDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn coffeeTemperatureDataGridViewTextBoxColumn;
         private BindingSource coffeeBindingSource;
+        private DataGridViewCheckBoxColumn isDecafDataGridViewCheckBoxColumn;
+        private DataGridViewTextBoxColumn coffeeRoastDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn typeOfCoffeeDataGridViewTextBoxColumn;
+        private DataGridViewCheckBoxColumn hasMilkDataGridViewCheckBoxColumn;
+        private DataGridViewTextBoxColumn beverageIDDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn beverageNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn beverageExDateDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn beverageContainerDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn beverageSizeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn beverageFlavorDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn beverageTemperatureDataGridViewTextBoxColumn;
     }
 }

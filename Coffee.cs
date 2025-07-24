@@ -6,28 +6,13 @@ using System.Threading.Tasks;
 
 namespace Assignment3._4._1
 {
-    public class Coffee : Beverage
+    public class Coffee : Beverage //Inherits from Beverage class
     {
-        public static class CoffeeInfo 
-        {
-            private static List<Coffee> Coffees;
+        public bool IsDecaf { get; set; } 
+        public string ?CoffeeRoast { get; set; } 
+        public string ?TypeOfCoffee { get; set; }
+        public string ?CoffeeStrength { get; set; } // Strength of the coffee
+        public bool HasMilk { get; set; } // Indicates if the coffee has milk
 
-            public static void CreateData()
-            {
-                Coffees = new List<Coffee>
-                {
-                         new Coffee { coffeeName = "Espresso", coffeeType = "Hot Beverage", coffeeSize = "Small", coffeeStrength = "Strong", coffeeFlavor = "None", coffeeTemperature = "Hot" },
-                         new Coffee { coffeeName = "Americano", coffeeType = "Hot Beverage", coffeeSize = "Medium", coffeeStrength = "Medium", coffeeFlavor = "None", coffeeTemperature = "Hot"},
-                         new Coffee { coffeeName = "Latte", coffeeType = "Hot Beverage", coffeeSize = "Large", coffeeStrength = "Medium", coffeeFlavor = "Vanilla", coffeeTemperature = "Hot"},
-                         new Coffee { coffeeName = "Cappuccino", coffeeType = "Hot Beverage", coffeeSize = "Medium", coffeeStrength = "Strong", coffeeFlavor = "Chocolate", coffeeTemperature = "Hot"},
-                         new Coffee { coffeeName = "Mocha", coffeeType = "Hot Beverage", coffeeSize = "Large", coffeeStrength = "Medium", coffeeFlavor = "Chocolate", coffeeTemperature = "Hot"}
-
-                };
-            }
-            public static List<Coffee> GetCoffees()
-            {
-                return Coffees;
-            }   
-        }
     }
 }
